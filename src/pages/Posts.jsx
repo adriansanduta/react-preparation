@@ -29,7 +29,9 @@ const Posts = () => {
     <div className="post__search--container">
       <label className="post__search--label">Search by Id</label>
       <input
-        type="number" value={searchId} onChange={(event) => setSearchID(event.target.value)} />
+        type="number" value={searchId} onChange={(event) => setSearchID(event.target.value)}
+        onKeyPress={(event) => event.key === "Enter" && onSearch()}
+         />
       <button onClick={ () => onSearch() }>Enter</button>
     </div>
   </div>
